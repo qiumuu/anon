@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/css/mdui.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/js/mdui.min.js"></script>
+    <link rel="shortcut icon" href="https://qingfeng-wiki.vercel.app/pics/ico.png" type="image/x-icon">
+    <title>清风wiki</title>
+    <style>
+        .img {
+            border: 3px solid rgb(46, 46, 46);
+        }
+        
+        .img3 {
+            border: 2px solid rgb(46, 46, 46);
+        }
+        
+        .footer {
+            position: absolute;
+            background-color: #000000;
+            color: white;
+            width: 100%;
+            bottom: 0px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .about {
+            margin-top: 20px;
+            margin-left: 30px;
+            margin-right: 15px;
+            color: #000c;
+        }
+        
+        #dialog {
+            background-color: #fefefe;
+            padding-top: 10px;
+            min-height: 400px;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<div class="mdui-dialog mdui-dialog-open" id="dialog">
+    <div class="about">
+        <h2>匿名信箱测试版</h2>
+    </div>
+    <div class="footer"> qiumu</div>
+</div>
+
+<body class="mdui-bottom-nav-fixed " style="padding-top: 50px;">
+    <div class="mdui-drawer mdui-drawer-full-height mdui-drawer-close mdui-color-white" id="sidebar">
+        <p>&nbsp;</p>
+
+        <div class="mdui-container">
+            <div class="mdui-typo-headline-opacity">&nbsp;匿名信箱</div>
+            </img>
+
+        </div>
+        <div>&nbsp;</div>
+
+    </div>
+    <div class="mdui-container">
+        <div class="mdui-container">
+            <div class="mdui-container">
+
+                <div class="mdui-appbar  mdui-shadow-0">
+                    <div class="mdui-toolbar">
+                        <button mdui-drawer="{target:'#sidebar',overlay:true,swipe:true}" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon material-icons">menu</i> </button>
+                        <div class="mdui-toolbar-spacer"></div>
+                    </div>
+                </div>
+                <div>&nbsp;</div>
+                <script src="./js/Valine.min.js"></script>
+
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+
+                <div id="vcomments"></div>
+            </div>
+        </div>
+    </div>
+    <div>&nbsp;</div>
+    <script>
+        window.onload = function() {
+
+            inst.open();
+
+        }
+        var $ = mdui.$;
+        var inst = new mdui.Dialog('#dialog');
+    </script>
+
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'YbdD8EOxag60XDXhiV57Cod7-gzGzoHsz',
+            appKey: 'sBhksl6VeuraYQUBtQMuoSkr',
+        })
+    </script>
+    </div>
+    </div>
+
+</body>
+
+</html>
